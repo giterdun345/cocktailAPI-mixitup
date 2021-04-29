@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+
+
+.header-container{
+  color:black;
+  // font-family: needs choosing  
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:space-around;
+  width: 100%;
+  align-content: space-around;
+
+  .link-container{
+    backgound-color:red;
+
+    .nav-link{
+      display:flex;
+      flex-flow: row nowrap;
+      order: 2
+    }
+
+    ul{
+      text-decoration:none;
+    }
+  }
+  
+}
+
+// ###################   logo styling 
+.logo-container{
+  background-color:green;
+
+  font-family: "Freckle Face";
+  text-decoration: none;
+  order: 1;
+  
+}
+
+// ################### search bar styling 
+.search-bar{
+  background-color:blue;
+  order: 3;
+  
+}
+
