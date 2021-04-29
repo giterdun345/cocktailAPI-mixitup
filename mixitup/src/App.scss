@@ -1,45 +1,86 @@
+
+// "Freckle Face"
 @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+// "Bebas Neue"
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* SCSS HEX */
+$prussian-blue: #003049ff;
+$maximum-red: #d62828ff;
+$orange: #f77f00ff;
+$maximum-yellow-red: #fcbf49ff;
+$lemon-meringue: #eae2b7ff;
+
+.header{
+  padding-top:15px;
 
 
-.header-container{
-  color:black;
-  // font-family: needs choosing  
-  display: flex;
-  flex-flow: column wrap;
-  justify-content:space-around;
-  width: 100%;
-  align-content: space-around;
+  .header-container{
+    font-family: "Bebas Neue";
+    letter-spacing:2px;
+    width: 100%;
+    z-index:2;
 
-  .link-container{
-    backgound-color:red;
-
-    .nav-link{
-      display:flex;
-      flex-flow: row nowrap;
-      order: 2
-    }
-
-    ul{
-      text-decoration:none;
-    }
-  }
+    display:grid;
+    grid-template-columns:30% 60%;
   
-}
+
+    .link-container{
+      margin-top: 2.4vw;
+      list-style-type: none;
+      display:flex;
+      align-content: center;
+      justify-content:space-around;
+
+      li{
+        font-size:3vw;
+        display: inline-block;
+        white-space: nowrap;
+         
+        a{
+          color:$lemon-meringue;
+          text-decoration: none;
+
+        }
+        a:hover{
+          color:$maximum-red;
+        }
+
+
+      }
+    } 
+  }
+} 
+
 
 // ###################   logo styling 
 .logo-container{
-  background-color:green;
-
+  margin-left: 2rem;
   font-family: "Freckle Face";
+  display: flex;
   text-decoration: none;
-  order: 1;
-  
+   
+  span{
+    font-size:5.5vw;
+    text-shadow:"2px 3px #003049ff";
+    display:inline-block;
+  }
 }
 
 // ################### search bar styling 
 .search-bar{
-  background-color:blue;
+  // background-color:blue;
+  align-self:center;
   order: 3;
-  
+}
+
+// ############ landing page 
+.landing-container{
+  .landing-img{
+    background-image: url("/images/landing-img.jpg");
+    position:absolute;
+    width:100%;
+    max-height:100vh;
+    z-index:-1;
+  }
 }
 
