@@ -7,7 +7,7 @@ const NavLinks = ()=>{
   return(   
     <nav>
       <ul className='link-container'>
-      { links.map(element => <li><a href='#' className='nav-link'> {element} |</a></li>)}
+      { links.map(element => <li><a href='#' className='nav-link'> {element} &nbsp; |</a></li>)}
       </ul>
     </nav>
   )

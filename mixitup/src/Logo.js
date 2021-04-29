@@ -11,7 +11,7 @@ const Logo = ()=>{
           </span>                 
           <span style={{color:"#f77f00ff", textShadow:"2px 3px #003049ff"}}><i>Mix</i></span>
           <span 
-          style={{color:"#eae2b7ff", textShadow:"2px 3px #003049ff"}}><i>It</i>Up</span>
+          style={{color:"#eae2b7ff", textShadow:"2px 3px #003049ff"}}><i>it</i>Up</span>
       </a>
   )
 }
