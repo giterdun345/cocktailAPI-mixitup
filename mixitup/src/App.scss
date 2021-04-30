@@ -64,13 +64,6 @@ $lemon-meringue: #eae2b7ff;
   }
 }
 
-// ################### search bar styling 
-.search-bar{
-  // background-color:blue;
-  align-self:center;
-  order: 3;
-}
-
 // ###################################  landing page 
 .landing-container{
   .landing-img{
@@ -87,8 +80,12 @@ $lemon-meringue: #eae2b7ff;
     color: $lemon-meringue;
     text-shadow: 2px 2px 1px $prussian-blue;
     font-size: 2vw;
-    margin: 11vw 0 0 6vw;
+    margin: 11vw 0 15vw 6vw;
     position: relative;
+
+    @media screen and(max-width:1000px){
+      margin-bottom: 30vw;
+    }
 
     a{
       color:$lemon-meringue;
@@ -100,53 +97,72 @@ $lemon-meringue: #eae2b7ff;
       color: $maximum-yellow-red;
     }
   }
-
   // END LANDING-OVER-IMG 
+
   .landing-content{
     display:grid;
-    grid-template-columns: repeat(6, 1fr);
     width:95%;
-    max-width:100vw;
-    margin: 0 auto;
-    border: 5px dashed blue;
+    margin:auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap:5vw;
+    grid-row-gap:3.5vw;
+    // row-gap: 10vw;
     font-size: 2vw;
-
-    .content-image, .content-text{
-      grid-row: 1 / 3;
-    }
-
+    color:$prussian-blue;
+    font-family:"Spartan";
+    
     .content-image{
-      grid-column: 1 / 3;
-      z-index:1;
+      max-width: 50%;
     }
 
     .content-text{
-      grid-column: 3 / -1;
-      background-color:#fcbf49ff;
-      justify-self:end;
-      align-self:center;
-      z-index:2
-    }
-
-    &:nth-child(2) {
-      .content-image, .content-text{
-        grid-row: 3 / -1;
-      }
-
-      .content-image{
-        grid-column: 3 / -1;
-      }
-  
-      .content-text{
-        grid-column: 1 / 4;
-        // background-color:#fcbf49ff;
-        justify-self:end;
-        align-self:center;
-        z-index:2
-      }
+      align-self:stretch;
+      overflow:hidden;
+      font-size:2vw;
+      white-space: wrap;
     }
   }
+    // overlapping both divs will assess this later 
+    // .content-image, .content-text{
+    //   grid-row: 1 / 2;
+    // }
 
+    // .content-image{
+    //   grid-column: 1 / 3;
+    //   z-index:1;
+    // }
+
+    // .content-text{
+    //   grid-column: 3 / -1;
+    //   // background-color:#fcbf49ff;
+    //   background-color: #f77f00ff;
+    //   border-radius:10%;
+    //   justify-self:end;
+    //   align-self:center;
+    //   z-index:2;
+    //   max-width: 58vw;
+    //   font-size:2vw;
+    // }
+
+    // &:nth-child(2) {
+    //   .content-image, .content-text{
+    //     grid-row: 3 / -1;
+    //   }
+
+    //   .content-image{
+    //     grid-column: 3 / -1;
+    //   }
+  
+    //   .content-text{
+    //     grid-column: 1 / 4;
+        
+    //     // background-color:#fcbf49ff;
+    //     justify-self:end;
+    //     align-self:center;
+    //     z-index:2
+    //   }
+    // }
 }
 
 // #################   button with hover wipe 
@@ -173,7 +189,7 @@ button.landing-btn{
 
 @media only screen and (max-width: 1000px){
   button.landing-btn{
-     display:none;
+     display: none;
   }
 }
 
@@ -203,5 +219,64 @@ button.lb-2:after {
 button.lb-2:hover:after,
 button.lb-2:active:after {
   height: 100%;
+}
+
+// ################### search bar styling 
+//  Thanks to https://codepen.io/takaneichinose/pen/gKVXXL
+.search {
+  margin: 20px; 
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  // filter: drop-shadow(3px 3px $prussian-blue);
+}
+
+
+.search > div:after {
+  content: "";
+  background: $maximum-red;
+  width: 4px;
+  height: 1.5rem;
+  position: absolute;
+  top: 2.5rem;
+  right: 0.1rem;
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: $prussian-blue;
+  font-size: 3vw;
+  background: transparent;
+  width: 1.625rem;
+  height: 1.625rem;
+  padding: 0.625rem;
+  border: solid 3px $maximum-red;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color:$prussian-blue;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 30vw;
+}
+
+@media screen and (max-width:630px){
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+    width: 20vw;
+  }
 }
 

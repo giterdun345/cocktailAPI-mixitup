@@ -8,40 +8,40 @@ import Button from '../Button';
 const LandingContent = ()=>{
 
   return(
-    <div id="content" style={{backgroundColor: "#eae2b7ff", height:"500px", marginTop:"1vw"}}>
+    <div id="content">
+      {/* possible map to populate however reversed second row TODO  */}
       <div className='landing-content'>
+        {/* row 1  */}
         <div className='content-image'>
-            <img style={{height:"35vw"}}src={fourLineup} alt='four cocktails lined up, ready to go' />
-          
+            <img style={{height:"35vw", borderRadius:"50%"}}src={fourLineup} alt='four cocktails lined up, ready to go' />
         </div>
         <div className='content-text'>
             <p>Search by the name of the cocktail:</p>
             <SearchBar />
-            <p>Some examples include Long Island Ice Tea, Butterfly Effect, Negroni and New Moon. Throw in a random name and see what haapens. </p>
-
+            <p style={{fontSize:"1.5vw"}}>Some examples include Long Island Iced Tea, Butterfly Effect, Negroni and New Moon. Throw in a random name and see what happens. </p>
         </div>
       </div>
+      {/* row 2  */}
       <div className='landing-content'>
-        <div className='content-image'>
-            <img style={{height:"35vw", border: "1px solid #ddd", borderRadius: "4px"}} src={lemonLime} alt='four cocktails lined up, ready to go' />
-        </div>
-        <div className='content-text'>
-            <p> Browse thorugh some ingedients to learn more about it and what drinks it can make.</p>
+      <div className='content-text'>
+            <p> Browse through some ingedients to learn more about it and what drinks it can make. Maybe you have something laying around and you want to use it?</p>
             <Button to='#' text='Browse Ingredients' />
+        </div>
+        <div className='content-image'>
+            <img style={{height:"35vw", border: "1px solid #ddd", borderRadius:"50%"}} src={lemonLime} alt='four cocktails lined up, ready to go' />
         </div>
       </div>
+      {/* row 3  */}
       <div className='landing-content'>
         <div className='content-image'>
-            <img style={{height:"35vw"}}src={emptyGlasses} alt='four cocktails lined up, ready to go' />
-          
+            <img style={{height:"35vw", borderRadius:"50%"}}src={emptyGlasses} alt='four cocktails lined up, ready to go' />
         </div>
         <div className='content-text'>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <Button to='#' text='Browse Ingredients' />
+            <p>You can browse the database by the first letter of the drink name.</p>
+            <Button to='#' text='Browse Alphabetically' />
         </div>
       </div>
     </div>
-
   )
 }
 
