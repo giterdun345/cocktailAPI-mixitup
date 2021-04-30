@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 import LandingHero from './LandingHero';
 import LandingContent from './LandingContent';
 

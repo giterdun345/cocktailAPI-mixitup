@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import Header from '../header/Header';
-import { Scrambler, Cycler } from "react-text-scrambler";
+import { Scrambler } from "react-text-scrambler";
 
 import landingImg from '../images/landing-img.jpg';
 
