@@ -125,26 +125,47 @@ $lemon-meringue: #eae2b7ff;
   }
 }
 
-// #################   button with hover wipe 
-.btn-form{
+// #################   button with hover wipe possible mixin for reusable component?
+
+.hero-btn-form{
   margin:4rem 0 4rem 14rem;
 }
 
-// thanks to https://codepen.io/forkintheroad/pen/xxGaXbK 
-button.landing-btn{
+.content-btn-form{
+  margin: auto;
+  max-width: 45vw;
+}
+
+@mixin std-btn {
   background: transparent;
-  color: $lemon-meringue;
-  border: 2px solid $lemon-meringue;
-  box-shadow: 2px 2px 2px $maximum-yellow-red;
-  font-size: 1.25rem;
   letter-spacing: 2px;
-  padding: 1rem 3rem;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
+
+}
+
+// thanks to https://codepen.io/forkintheroad/pen/xxGaXbK 
+button.landing-btn{
+  @include std-btn;
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+  color: $lemon-meringue;
+  border: 2px solid $lemon-meringue;
+  box-shadow: 2px 2px 2px $maximum-yellow-red;
+ 
+}
+
+button.content-btn{
+  @include std-btn;
+  font-size: 3vw;
+  padding: 6px;
+  color: $prussian-blue;
+  border: 2px solid $prussian-blue;
+  box-shadow: 2px 2px 2px $prussian-blue;
 }
 
 @media only screen and (max-width: 1000px){

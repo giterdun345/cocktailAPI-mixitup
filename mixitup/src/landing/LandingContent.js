@@ -24,8 +24,8 @@ const LandingContent = ()=>{
       {/* row 2  */}
       <div className='landing-content'>
       <div className='content-text'>
-            <p> Browse through some ingedients to learn more about it and what drinks it can make. Maybe you have something laying around and you want to use it?</p>
-            <Button to='#' text='Browse Ingredients'/>
+            <p> Browse through some ingredients to learn more about it and what drinks it can make. Maybe you have something laying around and you want to use it?</p>
+            <Button to='#' text='Browse Ingredients' formType='content-btn-form' classType='content-btn' />
         </div>
         <div className='content-image'>
             <img style={{height:"35vw", border: "1px solid #ddd", borderRadius:"50%"}} src={lemonLime} alt='four cocktails lined up, ready to go' />
@@ -38,7 +38,7 @@ const LandingContent = ()=>{
         </div>
         <div className='content-text'>
             <p>You can browse the database by the first letter of the drink name.</p>
-            <Button to='#' text='Browse Alphabetically' />
+            <Button to='#' text='Alphabetical Browse' formType='content-btn-form' classType='content-btn' />
         </div>
       </div>
     </div>

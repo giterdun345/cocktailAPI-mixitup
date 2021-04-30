@@ -25,7 +25,7 @@ const hOne = given =>(
           <p style={{fontSize:"1.5vw"}}>Uses an open, crowd-sourced database from 
             <a href="https://www.thecocktaildb.com/" > CocktailDB </a> 
             <br/>containing drinks and cocktails from around the world.</p>
-          <Button to="#content" text="Learn More" />
+          <Button to="#content" text="Learn More" formType="hero-btn-form hero-btn" classType="landing-btn"/>
         </section>
     </div>
   )
