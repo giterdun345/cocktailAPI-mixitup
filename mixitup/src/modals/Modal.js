@@ -1,6 +1,13 @@
 import React from "react";
-export default class Modal extends React.Component {
-  render() {
-    return <div>Hello Modal</div>;
-  }
+import Random from '../reusables/Random';
+
+const Modal= (props)=> {
+
+    return (
+      <div>
+        {props.show ? <div className="modal"><Random loading={props.show} /></div> : null}
+      </div>
+    )
 }
+
+export default Modal;

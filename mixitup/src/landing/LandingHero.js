@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button';
+import Button from '../reusables/Button';
 import Header from '../header/Header';
 import { Scrambler } from "react-text-scrambler";
 

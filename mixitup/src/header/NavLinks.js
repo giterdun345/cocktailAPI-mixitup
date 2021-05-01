@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Modal from '../modals/Modal';
 
 const NavLinks= ()=>{
   // nav links ingredients and random link to seperate link whil names has modal pop up 
@@ -9,11 +10,12 @@ const NavLinks= ()=>{
   return(   
     <nav>
       <ul className='link-container'>
-      { links.map((element, index) => element === "Names" ? 
-      <li key={index}><a href='#' onClick={() => setShow(!show)} className='nav-link' key={element}> {element} &nbsp; |</a></li>
-      : <li key={index}><a href='#' className='nav-link'  key={element}> {element} &nbsp; |</a></li>
+      { links.map((element, index) => element === "Random" ? 
+      <li key={index}><a href='#popped' onClick={() => {setShow(!show)}} className='nav-link' key={element}> | {element}</a></li>
+      : <li key={index}><a href={`/${element}`} className='nav-link'  key={element}> | {element} </a></li>
       )}
       </ul>
+      <Modal show={show} />
     </nav>
   )
 }

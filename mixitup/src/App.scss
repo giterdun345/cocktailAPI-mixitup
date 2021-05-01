@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 // "Arvo "
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+
 /* SCSS HEX */
 $prussian-blue: #003049ff;
 $maximum-red: #d62828ff;
@@ -15,8 +16,8 @@ $maximum-yellow-red: #fcbf49ff;
 $lemon-meringue: #eae2b7ff;
 
 .header{
-  padding-top:15px;
-
+   padding-top:15px;
+  
   .header-container{
     font-family: "Bebas Neue";
     letter-spacing:2px;
@@ -50,9 +51,10 @@ $lemon-meringue: #eae2b7ff;
   }
 } 
 
-// ###################   logo styling 
+// ###################################   logo styling 
 .logo-container{
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
   font-family: "Freckle Face";
   display: flex;
   text-decoration: none;
@@ -180,7 +182,7 @@ button.lb-2{
 }
 
 button.lb-2:hover{
-  color: black;
+  color: $prussian-blue;
 }
 
 button.lb-2:after {
@@ -211,7 +213,6 @@ button.lb-2:active:after {
 .search > div {
   display: inline-block;
   position: relative;
-  // filter: drop-shadow(3px 3px $prussian-blue);
 }
 
 .search > div:after {
@@ -260,3 +261,51 @@ button.lb-2:active:after {
   }
 }
 
+// #################################### MODAL STYLING 
+.modal{
+  position: fixed;
+  z-index:3;
+  width: 100%;
+  height: 100vh;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:$lemon-meringue;
+  font-family: Arvo;
+  letter-spacing: 0;
+
+  
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+  }
+}
+
+.random-modal{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+  margin-left:10vw;
+  
+}
+
+// #################################### RANDOM ITEMS STYLING 
+.random-cocktail{
+  h2{
+    font-size:2vw;
+  }
+
+  h3{
+    font-size:2vw;
+    margin:0;
+    text-transform: uppercase;
+
+  }
+
+  h4{
+    font-size:2vw;
+    margin:4px;
+  }
+}
