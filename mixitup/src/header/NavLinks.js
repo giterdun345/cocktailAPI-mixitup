@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '../modals/Modal';
+import Modal from '../reusables/Modal';
 
 const NavLinks= ()=>{
   // nav links ingredients and random link to seperate link whil names has modal pop up 
