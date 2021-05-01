@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from './Button';
 
 const Random= (props)=>{
 
@@ -12,7 +13,7 @@ const Random= (props)=>{
  
   const populatedData= (
     <section>
-      <img className='img' style={{width:"20.5vw"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
+      <img className='img' style={{width:"20.5vw", textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
       <h2>{data.strDrink}</h2>
       <h3>{data.strAlcoholic}</h3>
       <h4>{`${data.strGlass}`}</h4>
@@ -39,7 +40,7 @@ const Random= (props)=>{
   return(
     
     <section className="modal-content">
-      <h1 style={{fontSize:"3vw", textAlign:"center"}}>Randomly Generated Cocktails</h1>
+      {/* <h1 style={{fontSize:"3vw", textAlign:"center", fontFamily:"Spartan"}}>Randomly Generated Cocktails</h1> */}
       <div className="random-modal">
         <div className='random-cocktail'>
         {data ? populatedData : stillLoading}
@@ -51,7 +52,10 @@ const Random= (props)=>{
         {data ? populatedData : stillLoading}
         </div>
       </div>
-      <span style={{textAlign:"center", fontSize:"2vw", color:"#d62828ff"}}>Drinks will remian the same until production API key is approved.</span>                    
+      <span style={{textAlign:"center", fontSize:"1vw", whitespace:"no-wrap", color:"#d62828ff"}}>Drinks will remian the same until production API key is approved.</span>                    
+      <div style={{margin:"auto"}}>
+        <Button to='randomList' formType="content-btn-form" classType="content-btn" text="More Random Stuff" />
+      </div>
     </section>
   )
 }

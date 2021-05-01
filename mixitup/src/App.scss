@@ -267,7 +267,7 @@ button.lb-2:active:after {
 .modal-overlay{
   position: fixed;
   z-index:3;
-  top:10%;
+  top:17%;
   left:50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -282,7 +282,7 @@ button.lb-2:active:after {
     position: absolute;
     top:0;
     left:0;
-    padding: 2vw;
+    padding: 1vw;
     // allowing scroll in modal 
     overflow:auto;
     width:100%
@@ -300,10 +300,16 @@ button.lb-2:active:after {
 .random-cocktail{
 
   border: 2px solid black;
+  border-radius:5px;
+  box-shadow: 2px 2px $prussian-blue;
   margin-bottom: 1.5rem;
+  width:20.5vw;
+  text-align:center;
+
   h2{
     font-size:2vw;
     text-align:center;
+    margin: 0 1vw 0.5vw 1vw;
   }
 
   h3{
