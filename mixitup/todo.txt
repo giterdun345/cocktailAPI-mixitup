@@ -1,0 +1,4 @@
+style modal
+import data to names, style filters 
+import data to ingredients
+import data and create links to random page

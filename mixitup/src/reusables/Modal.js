@@ -5,7 +5,7 @@ const Modal= (props)=> {
 
     return (
       <div>
-        {props.show ? <div className="modal"><Random loading={props.show} /></div> : null}
+        {props.show ? <div className="modal-overlay"><Random loading={props.show} /></div> : null}
       </div>
     )
 }

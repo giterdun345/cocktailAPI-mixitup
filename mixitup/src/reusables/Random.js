@@ -15,7 +15,7 @@ const Random= (props)=>{
       <img className='img' style={{width:"20.5vw"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
       <h2>{data.strDrink}</h2>
       <h3>{data.strAlcoholic}</h3>
-      <h4>{`Glass: ${data.strGlass}`}</h4>
+      <h4>{`${data.strGlass}`}</h4>
     </section>
   )
 
@@ -38,7 +38,7 @@ const Random= (props)=>{
 
   return(
     
-    <section className="r">
+    <section className="modal-content">
       <h1 style={{fontSize:"3vw", textAlign:"center"}}>Randomly Generated Cocktails</h1>
       <div className="random-modal">
         <div className='random-cocktail'>
@@ -51,19 +51,7 @@ const Random= (props)=>{
         {data ? populatedData : stillLoading}
         </div>
       </div>
-      <span style={{textAlign:"center", color:"#d62828ff"}}>Drinks will remian the same until production API key is approved.</span>
-
-        {/* // <div>
-        //   <h2>Ingredients</h2>
-        //   <div>
-        //     <img className='' alt='Randomly generated drink' />
-        //     <h3 className='alcohol'>Non-Alcoholic</h3>
-        //     <h2 className='title'>Negroni</h2>
-        //     <h4>Glass: Shot glass</h4>
-        //   </div>
-        // </div> */}
-
-                      
+      <span style={{textAlign:"center", fontSize:"2vw", color:"#d62828ff"}}>Drinks will remian the same until production API key is approved.</span>                    
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '../reusables/Modal';
 
 const NavLinks= ()=>{
@@ -6,7 +6,14 @@ const NavLinks= ()=>{
   const links = ['Names', 'Ingredients', 'Random']
   const [ show, setShow ] = useState(false)
  
-  
+  // turn off vertical scroll when modal is open 
+  if(show){
+      document.body.style.overflow = 'hidden'
+    }
+  else{
+      document.body.style.overflow = 'auto'
+    }
+
   return(   
     <nav>
       <ul className='link-container'>
