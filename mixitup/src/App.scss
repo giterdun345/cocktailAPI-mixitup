@@ -25,28 +25,32 @@ $lemon-meringue: #eae2b7ff;
     letter-spacing:2px;
     width: 100%;
     z-index:2;
-    display:grid;
+    display: grid;
     grid-template-columns:30% 60%;
   
     .link-container{
       margin-top: 2.4vw;
       list-style-type: none;
-      display:flex;
+      display: flex;
       align-content: center;
-      justify-content:space-around;
+      justify-content: space-around;
 
       li{
-        font-size:3vw;
+        font-size: 3vw;
         display: inline-block;
         white-space: nowrap;
          
         a{
-          color:$lemon-meringue;
+          color: $lemon-meringue;
           text-decoration: none;
 
         }
         a:hover{
-          color:$maximum-red;
+          color: $maximum-red;
+        }
+
+        .active-modal{
+          color: $maximum-red;
         }
       }
     } 
@@ -267,11 +271,11 @@ button.lb-2:active:after {
 .modal-overlay{
   position: fixed;
   z-index:3;
-  top:17%;
+  top:13vw;
   left:50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-height: 400px;
+  max-height: 10vw;
   max-height: 100%;
   font-family: "Merriweather";
   
@@ -283,7 +287,7 @@ button.lb-2:active:after {
     top:0;
     left:0;
     padding: 1vw;
-    // allowing scroll in modal 
+    // allowing scroll in modal if needed for key approval
     overflow:auto;
     width:100%
    
@@ -294,6 +298,11 @@ button.lb-2:active:after {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+
+  a{
+    text-decoration: none;
+    color: black
+  }
 }
 
 // #################################### RANDOM ITEMS STYLING 

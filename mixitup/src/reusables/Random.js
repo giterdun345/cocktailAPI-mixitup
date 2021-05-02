@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const Random= (props)=>{
 
@@ -9,15 +9,14 @@ const Random= (props)=>{
                                     "strGlass": '',
                                     "strAlcoholic":''
                                   })
-
  
   const populatedData= (
-    <section>
+    <Link to={`/names-detail/${data.idDrink}`} alt='cocktail image click for details' style={{cursor:"pointer"}}>
       <img className='img' style={{width:"20.5vw", textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
       <h2>{data.strDrink}</h2>
       <h3>{data.strAlcoholic}</h3>
       <h4>{`${data.strGlass}`}</h4>
-    </section>
+    </Link>
   )
 
   const stillLoading= (
@@ -28,11 +27,11 @@ const Random= (props)=>{
   )
   
   useEffect(()=>{
+    // fetches a random cocktail
     if(props.loading){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
       .then(res => res.status !== 200 ? console.log(`Status Code: ${res.status}`): res.json())
-      .then(data => {setData(data.drinks[0])
-      console.log(data)})
+      .then(data => {setData(data.drinks[0])})
       .catch(err => console.log(`Fetch Error; Come on man:${err}`))
     }
   }, [props.loading])
@@ -41,6 +40,7 @@ const Random= (props)=>{
     
     <section className="modal-content">
       {/* <h1 style={{fontSize:"3vw", textAlign:"center", fontFamily:"Spartan"}}>Randomly Generated Cocktails</h1> */}
+      {/* <button type="button" onClick={props.showModal}>X</button> */}
       <div className="random-modal">
         <div className='random-cocktail'>
         {data ? populatedData : stillLoading}
@@ -52,9 +52,17 @@ const Random= (props)=>{
         {data ? populatedData : stillLoading}
         </div>
       </div>
-      <span style={{textAlign:"center", fontSize:"1vw", whitespace:"no-wrap", color:"#d62828ff"}}>Drinks will remian the same until production API key is approved.</span>                    
-      <div style={{margin:"auto"}}>
-        <Button to='randomList' formType="content-btn-form" classType="content-btn" text="More Random Stuff" />
+      <div style={{textAlign:"center"}}>
+        <span style={{fontSize:"2vw", whitespace:"no-wrap", color:"#d62828ff"}}>
+          <Link exact to='/random-list' style={{textDecoration:"none", color:"#f77f00ff"}}>
+            Get more random &nbsp; 
+            <span style={{textDecoration:"underline", color:"#d62828ff"}}>here!</span>
+          </Link>
+        </span>
+        <br/>
+        <span style={{fontSize:"1vw", whitespace:"no-wrap", color:"#d62828ff"}}>
+          Drinks will remian the same until production API key is approved.
+        </span>                    
       </div>
     </section>
   )
