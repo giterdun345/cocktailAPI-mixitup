@@ -1,9 +1,11 @@
 import React from 'react';
+import Header from './header/Header';
 
 const NameDetail= ()=>{
   return(
     <div>
-      Here are the details
+      <Header dark={true} />
+      Here are the details for ...
     </div>
 
   )

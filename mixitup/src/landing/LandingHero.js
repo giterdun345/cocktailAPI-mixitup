@@ -20,11 +20,12 @@ const hOne = given =>(
         <h1>
           <Scrambler text="Mix up your life with MixItUp" wrap={hOne} characters={characters}/>
         </h1>
-        <p style={{textIndent:"6vw"}}>Want some new ingredients to try?</p>
+          <p style={{textIndent:"6vw"}}>Want some new ingredients to try?</p>
           <p style={{textIndent:"6vw"}}> Want to explore different tastes?</p>
           <p style={{fontSize:"1.5vw"}}>Uses an open, crowd-sourced database from 
             <a href="https://www.thecocktaildb.com/" > CocktailDB </a> 
-            <br/>containing drinks and cocktails from around the world.</p>
+            <br/>containing drinks and cocktails from around the world.
+          </p>
           <Button to="#content" text="Learn More" formType="hero-btn-form hero-btn" classType="landing-btn"/>
         </section>
     </div>

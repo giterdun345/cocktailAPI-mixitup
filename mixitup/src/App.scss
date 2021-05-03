@@ -213,7 +213,7 @@ button.lb-2:active:after {
 // ################### search bar styling 
 //  Thanks to https://codepen.io/takaneichinose/pen/gKVXXL
 .search {
-  margin: 20px; 
+  margin: 2vw; 
 }
 
 .search > div {
@@ -224,22 +224,26 @@ button.lb-2:active:after {
 .search > div:after {
   content: "";
   background: $maximum-red;
-  width: 4px;
-  height: 1.5rem;
+  width: 5px;
+  height: 2vh;
   position: absolute;
-  top: 2.5rem;
-  right: 0.1rem;
-  transform: rotate(135deg);
+  top: 5vh;
+  right: .3vh;
+  // left:
+  box-shadow: 1px 2px 5px $prussian-blue;
+  transform: rotate(145deg);
 }
 
 .search > div > input {
   color: $prussian-blue;
   font-size: 3vw;
   background: transparent;
-  width: 1.625rem;
-  height: 1.625rem;
+  width: 2.2vh;
+  height: 2.2vh;
   padding: 0.625rem;
   border: solid 3px $maximum-red;
+  box-shadow: 1px 2px 5px $prussian-blue;
+
   outline: none;
   border-radius: 35px;
   transition: width 0.5s;
@@ -258,6 +262,13 @@ button.lb-2:active:after {
 .search > div > input:focus,
 .search > div > input:not(:placeholder-shown) {
   width: 30vw;
+}
+
+@media screen and (max-width:630px){
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+    width: 20vw;
+  }
 }
 
 @media screen and (max-width:630px){
@@ -305,7 +316,7 @@ button.lb-2:active:after {
   }
 }
 
-// #################################### RANDOM ITEMS STYLING 
+// #################################### RANDOM MODAL STYLING 
 .random-cocktail{
 
   border: 2px solid black;
@@ -334,4 +345,27 @@ button.lb-2:active:after {
     margin:4px;
     text-align:center;
   }
+}
+
+// ######################## NAMES LIST BY LETTER 
+.alpha-header{
+  display: grid;
+  grid-template-columns: 33% auto;
+  grid-template-rows: 5vw ;
+  grid-column-gap: 4vw;
+
+  .search-bar{
+    align-self: center;
+  }
+  .title{
+    align-self:center;
+    font-size: 3vw;
+  }
+}
+
+.letters{
+  font-size:3vw;
+  margin: auto;
+  color: $prussian-blue;
+  border-bottom: 2px solid $maximum-red;
 }

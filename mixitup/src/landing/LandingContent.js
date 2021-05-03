@@ -17,7 +17,9 @@ const LandingContent = ()=>{
         </div>
         <div className='content-text'>
             <p>Search by the name of the cocktail:</p>
+            <div style={{height:"5vw", marginBottom:"6vh"}}>
             <SearchBar />
+            </div>
             <p style={{fontSize:"1.5vw"}}>Some examples include Long Island Iced Tea, Butterfly Effect, Negroni and New Moon. Throw in a random name and see what happens. </p>
         </div>
       </div>
