@@ -16,6 +16,7 @@ $maximum-red: #d62828ff;
 $orange: #f77f00ff;
 $maximum-yellow-red: #fcbf49ff;
 $lemon-meringue: #eae2b7ff;
+$grayish: rgb(233, 233, 233);
 
 .header{
    padding-top:15px;
@@ -236,7 +237,7 @@ button.lb-2:active:after {
 
 .search > div > input {
   color: $prussian-blue;
-  font-size: 3vw;
+  font-size: 2.3vw;
   background: transparent;
   width: 2.2vh;
   height: 2.2vh;
@@ -351,8 +352,10 @@ button.lb-2:active:after {
 .alpha-header{
   display: grid;
   grid-template-columns: 33% auto;
-  grid-template-rows: 5vw ;
+  grid-template-rows: 10vw ;
   grid-column-gap: 4vw;
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
 
   .search-bar{
     align-self: center;
@@ -365,7 +368,71 @@ button.lb-2:active:after {
 
 .letters{
   font-size:3vw;
+  font-family: "Bebas Neue";
   margin: auto;
   color: $prussian-blue;
   border-bottom: 2px solid $maximum-red;
+}
+
+// ###########################################    COCKTAIL LIST CARDS
+.list-container{
+  margin: 1vw 2vw 5vh 2vw;
+
+}
+.list-cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-card{
+  margin-top: 5vw;
+  background:$grayish;
+  flex: 0 1 calc(25% - 1.5em);
+  font-family:"Merriweather";
+  border: 1px inset $prussian-blue;
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px $prussian-blue;
+
+  a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-align:center;
+
+    &:hover {
+      filter: alpha(opacity=30);
+      background-color: $maximum-yellow-red;
+      transition: background-color 1s ease-in-out;
+      color: $prussian-blue;
+      box-shadow: 5px 10px 50px $grayish;
+    }
+  }
+  
+
+  img{
+    margin-top: 3px;
+    border: 3px inset $prussian-blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  h3{
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  h4{
+    text-transform: full-size;
+    font-weight: 700;
+  }
+
+ 
+}
+
+@media screen and (max-width:417px){
+    .list-cards{
+      justify-content: center;
+    }
 }
