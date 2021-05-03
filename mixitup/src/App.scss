@@ -407,7 +407,8 @@ button.lb-2:active:after {
       background-color: $maximum-yellow-red;
       transition: background-color 1s ease-in-out;
       color: $prussian-blue;
-      box-shadow: 5px 10px 50px $grayish;
+      box-shadow: 0px 0px 50px $grayish;
+      transform: translateY(1vw);
     }
   }
   

@@ -1,4 +1,3 @@
-style modal
-import data to names, style filters 
+detail drinks
 import data to ingredients
 import data and create links to random page
