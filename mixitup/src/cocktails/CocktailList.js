@@ -30,7 +30,7 @@ const CocktailList= ()=>{
       </div>
         <div className='list-container'>
           <section className="list-cards">
-            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} idxKey={index + 57} fromIngredients={false} />) : <h2 key='345'> {status.toUpperCase()}:But nothing here yet...</h2>}
+            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} key={index} idxKey={index + 57} fromIngredients={false} />) : <h2 key='345'> {status.toUpperCase()}:But nothing here yet...</h2>}
           </section>
         </div>
     </div>

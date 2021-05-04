@@ -16,7 +16,7 @@ const ingList = data.drinks
     <ContentHeader text="Cocktails By Ingredient"/>
       <div className='list-container'>
         <section className="list-cards">
-          {ingList.map((element, index)=> <IngredientsCardList info={element} idxKey={index} />)}
+          {ingList.map((element, index)=> <IngredientsCardList info={element} key={index} idxKey={index} />)}
         </section>
       </div> 
   </div>
