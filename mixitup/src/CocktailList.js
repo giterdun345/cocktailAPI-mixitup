@@ -6,7 +6,7 @@ import CocktailCardList from './CocktailCardList';
 import Header from './header/Header';
 import SearchBar from "./reusables/SearchBar";
 
-const NamesList= ()=>{
+const CocktailList= ()=>{
   // LISTS NAMES OF COCKTAILS BY FIRST LETTER 
   const [letter, setLetter] = useState('a')
   const alpha = ['a','b','c','d','e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -21,10 +21,10 @@ const NamesList= ()=>{
   const{data, status} = useQuery(['fetchLetterList', letter], queryLetter, {manual: true, staleTime:300000})
   const drinks = data ? data.drinks : []
 
-  const alphaLink = (letter, key)=> {
+  const alphaLink = (letter, ikey)=> {
     // Maps each letter in header 
     return(
-      <Link to={`/Cocktails/#${letter}`} onClick={()=> setLetter(letter)} style={{marginLeft:"2.6vw", textDecoration:"none", color:"#003049ff"}}  key={key} >{letter.toUpperCase()}</Link>
+      <Link to={`/Cocktails/#${letter}`} onClick={()=> setLetter(letter)} style={{marginLeft:"2.6vw", textDecoration:"none", color:"#003049ff"}}  key={ikey} >{letter.toUpperCase()}</Link>
     )
   }
 
@@ -43,11 +43,11 @@ const NamesList= ()=>{
       </div>
         <div className='list-container'>
           <section className="list-cards">
-            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} idxKey={index} />) : <h2>{status.toUpperCase()}: But nothing here yet...</h2>}
+            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} idxKey={index + 57} />) : <h2>{status.toUpperCase()}: But nothing here yet...</h2>}
           </section>
         </div>
     </div>
   )
 }
 
-export default NamesList;
+export default CocktailList;
