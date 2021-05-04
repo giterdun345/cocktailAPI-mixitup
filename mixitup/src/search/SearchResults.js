@@ -31,7 +31,7 @@ const SearchResults =()=>{
       <hr/>
     <div className='list-container'>
       <section className="list-cards">
-        {cocktails ? cocktails.map((element, index)=> <CocktailCardList info={element} idxKey={index + 234} />) : <h2> Sorry, we didn't find anything.</h2>}
+        {cocktails ? cocktails.map((element, index)=> <CocktailCardList info={element} idxKey={`${element}${index}`} />) : <h2> Sorry, we didn't find anything.</h2>}
       </section>
     </div>
   </div>
