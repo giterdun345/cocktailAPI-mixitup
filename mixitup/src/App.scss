@@ -382,15 +382,15 @@ button.lb-2:active:after {
 .list-cards{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .list-card{
   margin-top: 5vw;
   background:$grayish;
   flex: 0 1 calc(25% - 1.5em);
-  font-family:"Merriweather";
+  font-family: "Merriweather";
   border: 1px inset $prussian-blue;
   border-radius: 5px;
   box-shadow: 2px 5px 10px $prussian-blue;
@@ -401,14 +401,12 @@ button.lb-2:active:after {
     text-decoration: none;
     color: black;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
       filter: alpha(opacity=30);
-      background-color: $maximum-yellow-red;
-      transition: background-color 1s ease-in-out;
       color: $prussian-blue;
-      box-shadow: 0px 0px 50px $grayish;
-      transform: translateY(1vw);
+      box-shadow: 0px 10px 50px $grayish;
     }
   }
   
@@ -427,11 +425,9 @@ button.lb-2:active:after {
     text-transform: full-size;
     font-weight: 700;
   }
-
- 
 }
 
-@media screen and (max-width:417px){
+@media screen and (max-width:432px){
     .list-cards{
       justify-content: center;
     }
@@ -447,12 +443,15 @@ button.lb-2:active:after {
 
     h1{
       align-self: end;
+      justify-self: end;
       font-weight: 300;
       font-style: italic;
       font-size: 4vw;
       white-space: no-wrap;
       margin-bottom:0;
       margin-top:0;
+      padding-right:8vw;
+
     }
   }
 }

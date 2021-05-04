@@ -12,6 +12,9 @@ const RandomList = lazy(()=> import('./RandomList'));
 const CocktailList = lazy(()=> import('./cocktails/CocktailList'));
 const CocktailDetail = lazy(()=> import('./cocktails/CocktailDetail'));
 const SearchResults = lazy(()=> import('./search/SearchResults'));
+const IngredientsList = lazy(()=> import('./ingredients/IngredientsList'));
+const IngredientDetail = lazy(()=> import('./ingredients/IngredientDetail'));
+
 
 
 function App() {
@@ -33,10 +36,10 @@ function App() {
               <Route exact path='/randomList' component={RandomList} />
               <Route exact path='/Cocktails' component={CocktailList} />
               <Route exact path='/names-detail/:nameid' component={CocktailDetail} />
-              <Route  path='/search-name/:name' component={SearchResults} />
+              <Route path='/search-name/:name' component={SearchResults} />
               {/* <Route component={()=> <h1>Looking for something else? Sorry the page was not found</h1>} /> */} 
-              {/* <Route exact path='/Ingredients' components={IngredientList} /> */}
-              {/* <Route exact path='/Ingredients-list' components={IngredientDetail} /> */}
+              <Route exact path='/ingredients' component={IngredientsList} />
+              <Route exact path='/ingredients-detail/:ingredient' component={IngredientDetail} />
               <ReactQueryDevtools initialIsOpen={false} />
             </QueryClientProvider>
         </Switch>

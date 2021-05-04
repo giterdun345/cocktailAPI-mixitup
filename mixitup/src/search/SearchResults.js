@@ -3,7 +3,8 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import CocktailCardList from '../cocktails/CocktailCardList';
 import Header from'../header/Header';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
+import ContentHeader from '../reusables/ContentHeader';
 
 const SearchResults =()=>{
   const searchFor = useParams().name
@@ -22,13 +23,14 @@ const SearchResults =()=>{
   return(
   <div>
     <Header dark={true} />
-    <div className="content-header">
-        <div className='search-bar'>
+    {/* <div className="content-header"> */}
+        {/* <div className='search-bar'>
           <SearchBar />
         </div>
         <h1 className="title">Search Results</h1>
       </div>
-      <hr/>
+      <hr/> */}
+      <ContentHeader text="Search Results" />
     <div className='list-container'>
       <section className="list-cards">
         {cocktails ? cocktails.map((element, index)=> <CocktailCardList info={element} idxKey={`${element}${index}`} />) : <h2> Sorry, we didn't find anything.</h2>}
