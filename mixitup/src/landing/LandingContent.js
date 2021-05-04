@@ -2,7 +2,7 @@ import React from 'react';
 import fourLineup from '../images/fourLineup.jpg';
 import lemonLime from '../images/lemonlimeCocktail.jpg';
 import emptyGlasses from '../images/emptyGlasses.jpg';
-import SearchBar from '../reusables/SearchBar';
+import SearchBar from '../search/SearchBar';
 import Button from '../reusables/Button';
 
 const LandingContent = ()=>{

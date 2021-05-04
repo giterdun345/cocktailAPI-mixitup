@@ -39,8 +39,6 @@ const Random= (props)=>{
   return(
     
     <section className="modal-content">
-      {/* <h1 style={{fontSize:"3vw", textAlign:"center", fontFamily:"Spartan"}}>Randomly Generated Cocktails</h1> */}
-      {/* <button type="button" onClick={props.showModal}>X</button> */}
       <div className="random-modal">
         <div className='random-cocktail'>
         {data ? populatedData : stillLoading}
@@ -54,7 +52,7 @@ const Random= (props)=>{
       </div>
       <div style={{textAlign:"center"}}>
         <span style={{fontSize:"2vw", whitespace:"no-wrap", color:"#d62828ff"}}>
-          <Link exact to='/random-list' style={{textDecoration:"none", color:"#f77f00ff"}}>
+          <Link to='/random-list' style={{textDecoration:"none", color:"#f77f00ff"}}>
             Get more random &nbsp; 
             <span style={{textDecoration:"underline", color:"#d62828ff"}}>here!</span>
           </Link>

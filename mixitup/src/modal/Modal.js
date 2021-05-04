@@ -1,5 +1,5 @@
 import React from "react";
-import Random from '../reusables/Random';
+import Random from './Random';
 
 const Modal= (props)=> {
 

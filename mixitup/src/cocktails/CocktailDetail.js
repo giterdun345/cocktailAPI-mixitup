@@ -2,8 +2,8 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 // components 
-import Header from './header/Header';
-import SearchBar from "./reusables/SearchBar";
+import Header from '../header/Header';
+import SearchBar from "../search/SearchBar";
 
 const NameDetail= ()=>{
   // DETAILS OF THE COCKTAIL WITH INGREDIENTS GIVEN AND INSTRUCTIONS. POSSIBLE OTHER LANGUAGE TO USE>

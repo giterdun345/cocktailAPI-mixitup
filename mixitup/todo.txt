@@ -1,5 +1,2 @@
-
-search functionality, you have to move the state out of the Seasrch component because it is rerendering on each typed letter 
- 
 import data to ingredients
 import data and create links to random page

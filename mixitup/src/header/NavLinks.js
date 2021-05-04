@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Modal from '../reusables/Modal';
+import Modal from '../modal/Modal';
 
 const NavLinks= ()=>{
   // nav links ingredients and random link to seperate link whil names has modal pop up 

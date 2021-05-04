@@ -9,9 +9,9 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 // components 
 const Landing = lazy(()=> import('./landing/Landing'));
 const RandomList = lazy(()=> import('./RandomList'));
-const CocktailList = lazy(()=> import('./CocktailList'));
-const CocktailDetail = lazy(()=> import('./CocktailDetail'));
-const SearchResults = lazy(()=> import('./reusables/SearchResults'));
+const CocktailList = lazy(()=> import('./cocktails/CocktailList'));
+const CocktailDetail = lazy(()=> import('./cocktails/CocktailDetail'));
+const SearchResults = lazy(()=> import('./search/SearchResults'));
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
               <Route exact path='/' component={Landing} />
               <Route exact path='/randomList' component={RandomList} />
               <Route exact path='/Cocktails' component={CocktailList} />
-              <Route  path='/names-detail/:nameid' component={CocktailDetail} />
+              <Route exact path='/names-detail/:nameid' component={CocktailDetail} />
               <Route  path='/search-name/:name' component={SearchResults} />
               {/* <Route component={()=> <h1>Looking for something else? Sorry the page was not found</h1>} /> */} 
               {/* <Route exact path='/Ingredients' components={IngredientList} /> */}

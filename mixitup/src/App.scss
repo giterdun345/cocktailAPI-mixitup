@@ -20,11 +20,11 @@ $lemon-meringue: #eae2b7ff;
 $grayish: rgb(233, 233, 233);
 
 .header{
-   padding-top:15px;
+   padding-top: 15px;
   
   .header-container{
     font-family: "Bebas Neue";
-    letter-spacing:2px;
+    letter-spacing: 2px;
     width: 100%;
     z-index:2;
     display: grid;
@@ -70,7 +70,7 @@ $grayish: rgb(233, 233, 233);
   span{
     font-size:5.5vw;
     text-shadow:"2px 3px #003049ff";
-    display:inline-block;
+    display: inline-block;
   }
 }
 
@@ -78,10 +78,10 @@ $grayish: rgb(233, 233, 233);
 .landing-container{
   .landing-img{
     background-image: url("/images/landing-img.jpg");
-    position:absolute;
-    width:100%;
-    max-height:100vh;
-    z-index:-1;
+    position: absolute;
+    width: 100%;
+    max-height: 100vh;
+    z-index: -1;
   }
 
   .landing-over-img{
@@ -110,14 +110,13 @@ $grayish: rgb(233, 233, 233);
   // END LANDING-OVER-IMG 
 
   .landing-content{
-    display:grid;
+    display: grid;
     width:95%;
-    margin:auto;
+    margin: auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-column-gap:5vw;
     grid-row-gap:3.5vw;
-    // row-gap: 10vw;
     font-size: 2vw;
     color:$prussian-blue;
     font-family:"Spartan";
@@ -127,8 +126,8 @@ $grayish: rgb(233, 233, 233);
     }
 
     .content-text{
-      align-self:stretch;
-      overflow:hidden;
+      align-self: stretch;
+      overflow: hidden;
       font-size:2vw;
       white-space: wrap;
     }
@@ -301,7 +300,7 @@ button.lb-2:active:after {
     left:0;
     padding: 1vw;
     // allowing scroll in modal if needed for key approval
-    overflow:auto;
+    overflow: auto;
     width:100%
    
   }
@@ -325,31 +324,31 @@ button.lb-2:active:after {
   box-shadow: 2px 2px $prussian-blue;
   margin-bottom: 1.5rem;
   width:20.5vw;
-  text-align:center;
+  text-align: center;
 
   h2{
     font-size:2vw;
-    text-align:center;
+    text-align: center;
     margin: 0 1vw 0.5vw 1vw;
   }
 
   h3{
     font-size:1vw;
-    margin:0;
+    margin: 0;
     text-transform: uppercase;
     font-weight: 300;
-    text-align:center;
+    text-align: center;
   }
 
   h4{
-    font-size:1vw;
-    margin:4px;
-    text-align:center;
+    font-size: 1vw;
+    margin: 4px;
+    text-align: center;
   }
 }
 
-// ######################## NAMES LIST BY LETTER 
-.alpha-header{
+// ######################## CONTENT LIST  
+.content-header{
   display: grid;
   grid-template-columns: 33% auto;
   grid-template-rows: 10vw ;
@@ -361,11 +360,12 @@ button.lb-2:active:after {
     align-self: center;
   }
   .title{
-    align-self:center;
+    align-self: center;
     font-size: 3vw;
   }
 }
 
+// ####################### BROWSE BY LETTER 
 .letters{
   font-size:3vw;
   font-family: "Bebas Neue";
@@ -374,14 +374,14 @@ button.lb-2:active:after {
   border-bottom: 2px solid $maximum-red;
 }
 
-// ###########################################    COCKTAIL LIST CARDS
+// ###########################################  LIST CARDS
 .list-container{
   margin: 1vw 2vw 5vh 2vw;
 
 }
 .list-cards{
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -400,7 +400,7 @@ button.lb-2:active:after {
     text-align: center;
     text-decoration: none;
     color: black;
-    text-align:center;
+    text-align: center;
 
     &:hover {
       filter: alpha(opacity=30);
@@ -440,7 +440,6 @@ button.lb-2:active:after {
 // ########################## DETAIL OF COCKTAIL
 .details{
   
-
   .detail-header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -451,16 +450,17 @@ button.lb-2:active:after {
       font-weight: 300;
       font-style: italic;
       font-size: 4vw;
-      white-space:no-wrap;
+      white-space: no-wrap;
       margin-bottom:0;
       margin-top:0;
     }
   }
 }
+
   .detail-container{
     display: flex;
     flex-flow: row wrap-reverse;
-    justify-content:center;
+    justify-content: center;
   } 
 
   .detail-info{

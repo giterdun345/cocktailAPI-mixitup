@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 // components 
 import CocktailCardList from './CocktailCardList';
-import Header from './header/Header';
-import SearchBar from "./reusables/SearchBar";
+import Header from '../header/Header';
+import SearchBar from "../search/SearchBar";
 
 const CocktailList= ()=>{
   // LISTS NAMES OF COCKTAILS BY FIRST LETTER 
@@ -21,17 +21,17 @@ const CocktailList= ()=>{
   const{data, status} = useQuery(['fetchLetterList', letter], queryLetter, {manual: true, staleTime:300000})
   const drinks = data ? data.drinks : []
 
-  const alphaLink = (letter, ikey)=> {
+  const alphaLink = (letter)=> {
     // Maps each letter in header 
     return(
-      <Link to={`/Cocktails/#${letter}`} onClick={()=> setLetter(letter)} style={{marginLeft:"2.6vw", textDecoration:"none", color:"#003049ff"}}  key={ikey} >{letter.toUpperCase()}</Link>
+      <Link to={`/Cocktails/#${letter}`} onClick={()=> setLetter(letter)} style={{marginLeft:"2.6vw", textDecoration:"none", color:"#003049ff"}}  key={letter} >{letter.toUpperCase()}</Link>
     )
   }
 
   return(
     <div>
       <Header dark={true} />
-      <div className="alpha-header">
+      <div className="content-header">
         <div className='search-bar'>
           <SearchBar />
         </div>
@@ -43,7 +43,7 @@ const CocktailList= ()=>{
       </div>
         <div className='list-container'>
           <section className="list-cards">
-            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} idxKey={index + 57} />) : <h2>{status.toUpperCase()}: But nothing here yet...</h2>}
+            {drinks ? drinks.map((element, index)=> <CocktailCardList info={element} idxKey={index + 57} />) : <h2 key='345'>{status.toUpperCase()}: But nothing here yet...</h2>}
           </section>
         </div>
     </div>
