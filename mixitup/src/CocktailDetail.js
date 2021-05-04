@@ -18,7 +18,7 @@ const NameDetail= ()=>{
       return fetchByName 
   }
 
-  const{ isLoading, isError, data} = useQuery(['cocktaildetails',{id}], queryCocktailDetail)
+  const{ isLoading, isError, data} = useQuery(['cocktaildetails',{id}], queryCocktailDetail, {staleTime: 300000})
   const details = !isLoading && !isError ? data.drinks[0]: null
 
   return(

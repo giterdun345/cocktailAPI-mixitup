@@ -227,13 +227,13 @@ button.lb-2:active:after {
   content: "";
   background: $maximum-red;
   width: 5px;
-  height: 2vh;
+  height: 2.3vh;
   position: absolute;
-  top: 5vh;
-  right: .3vh;
+  top: 5.3vh;
+  right: .4vh;
   // left:
   box-shadow: 1px 2px 5px $prussian-blue;
-  transform: rotate(145deg);
+  transform: rotate(135deg);
 }
 
 .search > div > input {
@@ -484,3 +484,43 @@ button.lb-2:active:after {
     box-shadow: 2px 2px 5px $prussian-blue;
   }
   
+
+//  ######################## LOADING ICON THANKS TO https://loading.io/css/
+  
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid $maximum-yellow-red;
+  border-color: $maximum-red transparent $maximum-red transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}

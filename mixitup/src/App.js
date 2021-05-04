@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>  
       {/* <div clCocktail='container'> */}
-      <Suspense fallback={(<div>Page Loading...</div>)}> 
+      <Suspense fallback={(<div className="lds-hourglass"></div>)}> 
         <Switch>
             <QueryClientProvider client={queryClient}>
               <Route exact path='/' component={Landing} />
