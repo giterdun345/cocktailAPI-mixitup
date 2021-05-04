@@ -40,7 +40,7 @@ const LandingContent = ()=>{
         </div>
         <div className='content-text'>
             <p>You can browse the database by the first letter of the drink name.</p>
-            <Button to='#' text='Alphabetical Browse' formType='content-btn-form' classType='content-btn' />
+            <Button to='/Cocktails' text='Alphabetical Browse' formType='content-btn-form' classType='content-btn' />
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
 detail drinks
+
+circular loading component on fallback 
 import data to ingredients
 import data and create links to random page
