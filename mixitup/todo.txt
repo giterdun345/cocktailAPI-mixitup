@@ -1,5 +1,5 @@
-detail drinks
 
+search functionality, you have to move the state out of the Seasrch component because it is rerendering on each typed letter 
 circular loading component on fallback 
 import data to ingredients
 import data and create links to random page
