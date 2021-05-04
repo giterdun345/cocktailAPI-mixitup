@@ -1,14 +1,12 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-
 // components 
 import Header from './header/Header';
-// import SearchBar from "./reusables/SearchBar";
-
+import SearchBar from "./reusables/SearchBar";
 
 const NameDetail= ()=>{
-
+  // DETAILS OF THE COCKTAIL WITH INGREDIENTS GIVEN AND INSTRUCTIONS. POSSIBLE OTHER LANGUAGE TO USE>
   const id = useParams().nameid
   const ingredientNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
@@ -20,30 +18,32 @@ const NameDetail= ()=>{
       return fetchByName 
   }
 
-  const{ isLoading, isError, data, error } = useQuery(['cocktaildetails',{id}], queryCocktailDetail)
-
+  const{ isLoading, isError, data} = useQuery(['cocktaildetails',{id}], queryCocktailDetail)
   const details = !isLoading && !isError ? data.drinks[0]: null
 
-  console.log(details)
   return(
     <div>
       <Header dark={true} />
-      <div className='details-container'>
-        <div className='detail-section'>
-          <img src={`${details.strDrinkThumb}`} alt={`${details.strDrink}`} />
+      <div className='details'>
+        <div className='detail-header'>
+          <div style={{margin:"0"}}>
+          <SearchBar />
+          </div>
+          <h1>{details.strDrink}</h1>
         </div>
-        <div className='detail-section'>
-          <h2>{details.strDrink}</h2>
-          <h3>{details.strAlcoholic}</h3>
-          <h4>{details.strGlass}</h4>
-          <h5>Instructions:{details.strInstructions}</h5>
-        </div>
-        <div className='detail-section'>
+        <hr/>
+        <div className='detail-container'>
+          <div className='detail-info'>
           <h2>Ingredients</h2>
-          {ingredientNum.map(n => details[`strIngredient${n}`] ? <h3>{details[`strIngredient${n}`]} {details[`strMeasure${n}`]}</h3> : null)}
+          <ul>
+            {ingredientNum.map(n => details[`strIngredient${n}`] ? <li key={n}>{details[`strIngredient${n}`]} {details[`strMeasure${n}`]}</li> : null)}
+          </ul>
+          <h4>Instructions: {details.strInstructions}</h4>
         </div>
-      </div>
-      <div className='ingredients-container'>
+          <div className='detail-img'>
+            <img style={{display:"block", width:"30vw", height:"30vw"}} src={`${details.strDrinkThumb}`} alt={`${details.strDrink}`}/>
+          </div>
+        </div>
       </div>
     </div> 
   )

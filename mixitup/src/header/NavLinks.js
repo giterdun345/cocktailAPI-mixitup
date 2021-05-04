@@ -24,7 +24,7 @@ const NavLinks= ()=>{
           <li key={index}><NavLink exact to={`/${element}`} className='nav-link'  key={element}> | {element} </NavLink></li>
       )}
       </ul>
-      <Modal show={show} />
+      <Modal show={show} setShow={setShow}/>
     </nav>
   )
 }

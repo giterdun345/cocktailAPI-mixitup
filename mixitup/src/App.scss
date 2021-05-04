@@ -4,12 +4,13 @@
 // "Bebas Neue"
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 // "Spartan"
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap');
 // "Arvo "
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
-// Merriweather  400  300
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap');
-
+// Merriweather  400  300 300/light
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap');
 /* SCSS HEX */
 $prussian-blue: #003049ff;
 $maximum-red: #d62828ff;
@@ -319,7 +320,6 @@ button.lb-2:active:after {
 
 // #################################### RANDOM MODAL STYLING 
 .random-cocktail{
-
   border: 2px solid black;
   border-radius:5px;
   box-shadow: 2px 2px $prussian-blue;
@@ -412,7 +412,6 @@ button.lb-2:active:after {
     }
   }
   
-
   img{
     margin-top: 3px;
     border: 3px inset $prussian-blue;
@@ -439,17 +438,49 @@ button.lb-2:active:after {
 }
 
 // ########################## DETAIL OF COCKTAIL
-.details-container{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-  align-items: center;
+.details{
+  
 
-  img{
-    width:100vw;
-  }
+  .detail-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family:"Merriweather";
 
-  .detail-section{
-    flex: 0 1 calc(33% - .5em);
+    h1{
+      align-self: end;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 4vw;
+      white-space:no-wrap;
+      margin-bottom:0;
+      margin-top:0;
+    }
   }
 }
+  .detail-container{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content:center;
+  } 
+
+  .detail-info{
+    font-family:"Merriweather";
+    letter-spacing: 1.25px;
+    margin-right: 10vw;
+    margin-left:10vw;
+    flex: 0 0 33em;
+  }
+
+  @media screen and (max-width:579px){
+    .detail-info{
+      flex: 0 1 auto;
+    }
+
+  }
+
+  .detail-img{
+    // vertical-align: middle;
+    border: 1px inset $prussian-blue;
+    box-shadow: 2px 2px 5px $prussian-blue;
+  }
+  

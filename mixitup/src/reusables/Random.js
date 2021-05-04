@@ -11,7 +11,7 @@ const Random= (props)=>{
                                   })
  
   const populatedData= (
-    <Link to={`/names-detail/${data.idDrink}`} alt='cocktail image click for details' style={{cursor:"pointer"}}>
+    <Link to={`/names-detail/${data.idDrink}`} onClick={()=> props.setShow(false)} alt='cocktail image click for details' style={{cursor:"pointer"}}>
       <img className='img' style={{width:"20.5vw", textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
       <h2>{data.strDrink}</h2>
       <h3>{data.strAlcoholic}</h3>
