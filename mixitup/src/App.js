@@ -2,10 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import { QueryClient, QueryClientProvider} from "react-query";
-import { ReactQueryDevtools } from 'react-query/devtools'
-// const QueryClient = lazy(()=> import ('react-query'))
-// const QueryClientProvider = lazy(()=> import('react-query'))
-// const ReactQueryDevtools = lazy(()=> import('react-query/devtools'));
+import { ReactQueryDevtools } from 'react-query/devtools';
 // components 
 const Landing = lazy(()=> import('./landing/Landing'));
 const CocktailList = lazy(()=> import('./cocktails/CocktailList'));
@@ -19,12 +16,12 @@ const IngredientDetail = lazy(()=> import('./ingredients/IngredientDetail'));
 function App() {
   
  const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      suspense: true,
+    defaultOptions: {
+      queries: {
+        suspense: true,
+      },
     },
-  },
-  })
+ })
 
   return (
     <Router>  
@@ -36,7 +33,6 @@ function App() {
               <Route exact path='/Cocktails/first-letter=:firstletter' component={CocktailList} />
               <Route exact path='/names-detail/:nameid' component={CocktailDetail} />
               <Route path='/search-name/:name' component={SearchResults} />
-              {/* <Route component={()=> <h1>Looking for something else? Sorry the page was not found</h1>} /> */} 
               <Route exact path='/ingredients' component={IngredientsList} />
               <Route exact path='/ingredients-detail/:ingredient' component={IngredientDetail} />
               <ReactQueryDevtools initialIsOpen={false} />
