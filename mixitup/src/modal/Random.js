@@ -39,28 +39,10 @@ const Random= (props)=>{
   return(
     
     <section className="modal-content">
-      <div className="random-modal">
+      <div className="random-container">
         <div className='random-cocktail'>
-        {data ? populatedData : stillLoading}
+          {data ? populatedData : stillLoading}
         </div>
-        <div className='random-cocktail'>
-        {data ? populatedData : stillLoading}
-        </div>
-        <div className='random-cocktail'>
-        {data ? populatedData : stillLoading}
-        </div>
-      </div>
-      <div style={{textAlign:"center"}}>
-        <span style={{fontSize:"2vw", whitespace:"no-wrap", color:"#d62828ff"}}>
-          <Link to='/random-list' style={{textDecoration:"none", color:"#f77f00ff"}}>
-            Get more random &nbsp; 
-            <span style={{textDecoration:"underline", color:"#d62828ff"}}>here!</span>
-          </Link>
-        </span>
-        <br/>
-        <span style={{fontSize:"1vw", whitespace:"no-wrap", color:"#d62828ff"}}>
-          Drinks will remian the same until production API key is approved.
-        </span>                    
       </div>
     </section>
   )

@@ -1,5 +1,1 @@
-import data to ingredients
 import data and create links to random page
-
-
-going back from drink or ingredients takes you back to search 

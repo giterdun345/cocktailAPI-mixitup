@@ -33,7 +33,6 @@ function App() {
         <Switch>
             <QueryClientProvider client={queryClient}>
               <Route exact path='/' component={Landing} />
-              <Route exact path='/randomList' component={RandomList} />
               <Route exact path='/Cocktails' component={CocktailList} />
               <Route exact path='/Cocktails/first-letter=:firstletter' component={CocktailList} />
               <Route exact path='/names-detail/:nameid' component={CocktailDetail} />
