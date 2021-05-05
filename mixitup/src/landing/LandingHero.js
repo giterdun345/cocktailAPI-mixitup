@@ -1,7 +1,7 @@
 import React from 'react';
+import { Scrambler } from "react-text-scrambler";
 import Button from '../reusables/Button';
 import Header from '../header/Header';
-import { Scrambler } from "react-text-scrambler";
 
 import landingImg from '../images/landing-img.jpg';
 
@@ -23,7 +23,7 @@ const hOne = given =>(
           <p style={{textIndent:"6vw"}}>Want some new ingredients to try?</p>
           <p style={{textIndent:"6vw"}}> Want to explore different tastes?</p>
           <p style={{fontSize:"1.5vw"}}>Uses an open, crowd-sourced database from 
-            <a href="https://www.thecocktaildb.com/" > CocktailDB </a> 
+            <a href="https://www.thecocktaildb.com/" target="_blank" rel="noreferrer" > CocktailDB </a> 
             <br/>containing drinks and cocktails from around the world.
           </p>
           <Button to="#content" text="Learn More" formType="hero-btn-form hero-btn" classType="landing-btn"/>
