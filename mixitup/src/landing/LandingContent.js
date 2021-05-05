@@ -30,13 +30,13 @@ const LandingContent = ()=>{
             <Button to='ingredients' text='Browse Ingredients' formType='content-btn-form' classType='content-btn' />
         </div>
         <div className='content-image'>
-            <img style={{height:"35vw", border: "1px solid #ddd", borderRadius:"50%"}} src={lemonLime} alt='four cocktails lined up, ready to go' />
+            <img style={{height:"35vw", width:'100', border: "1px solid #ddd", borderRadius:"50%"}} src={lemonLime} alt='four cocktails lined up, ready to go' />
         </div>
       </div>
       {/* row 3  */}
       <div className='landing-content'>
         <div className='content-image'>
-            <img style={{height:"35vw", borderRadius:"50%"}}src={emptyGlasses} alt='four cocktails lined up, ready to go' />
+            <img style={{height:"35vw", width:"100", borderRadius:"50%"}}src={emptyGlasses} alt='four cocktails lined up, ready to go' />
         </div>
         <div className='content-text'>
             <p>You can browse the database by the first letter of the drink name.</p>
