@@ -536,9 +536,10 @@ button.lb-2:active:after {
   }
 
   .detail-img{
-    // vertical-align: middle;
     border: 1px inset $prussian-blue;
     box-shadow: 2px 2px 5px $prussian-blue;
+    align-self: flex-end;
+    // max-height: 30vw;
   }
   
 

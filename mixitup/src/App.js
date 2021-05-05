@@ -8,7 +8,6 @@ import { ReactQueryDevtools } from 'react-query/devtools'
 // const ReactQueryDevtools = lazy(()=> import('react-query/devtools'));
 // components 
 const Landing = lazy(()=> import('./landing/Landing'));
-const RandomList = lazy(()=> import('./RandomList'));
 const CocktailList = lazy(()=> import('./cocktails/CocktailList'));
 const CocktailDetail = lazy(()=> import('./cocktails/CocktailDetail'));
 const SearchResults = lazy(()=> import('./search/SearchResults'));
