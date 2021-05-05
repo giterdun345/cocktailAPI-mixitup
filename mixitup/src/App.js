@@ -35,6 +35,7 @@ function App() {
               <Route exact path='/' component={Landing} />
               <Route exact path='/randomList' component={RandomList} />
               <Route exact path='/Cocktails' component={CocktailList} />
+              <Route exact path='/Cocktails/first-letter=:firstletter' component={CocktailList} />
               <Route exact path='/names-detail/:nameid' component={CocktailDetail} />
               <Route path='/search-name/:name' component={SearchResults} />
               {/* <Route component={()=> <h1>Looking for something else? Sorry the page was not found</h1>} /> */} 
