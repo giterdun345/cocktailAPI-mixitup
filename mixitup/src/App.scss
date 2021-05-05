@@ -305,9 +305,11 @@ button.lb-2:active:after {
     color: $maximum-red;
     font-weight: bold;
     font-size: 2rem;
-    text-align: center;
-    width: 2em;
-    height:2em;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 1em;
+    height:1em;
 
     
   }
