@@ -39,11 +39,9 @@ const Random= (props)=>{
   return(
     
     <section className="modal-content">
-      <div className="random-container">
         <div className='random-cocktail'>
           {data ? populatedData : stillLoading}
         </div>
-      </div>
     </section>
   )
 }
