@@ -16,10 +16,10 @@ const NavLinks= ()=>{
     }
 
   return(   
-    <nav>
-      <ul className='link-container'>
+    <nav className= "navlinks">
+      <ul className='links'>
       { links.map((element, index) => element === "Random" ? 
-          <li key={index}><NavLink exact to='#popped' onClick={() => {setShow(!show)}} className='nav-link' isActive={()=>show ? true:false}activeStyle={{color:"#d62828ff"}} key={element}> | {element}</NavLink></li>
+          <li key={index}><NavLink exact to='#popped' onClick={() => {setShow(!show)}} className='nav-link' isActive={()=>show ? true:false}activeStyle={{color:"#d62828ff"}} key={element}>| {element}</NavLink></li>
           : 
           <li key={index}><NavLink exact to={`/${element.toLowerCase()}`} className='nav-link'  key={element}> | {element} </NavLink></li>
       )}
