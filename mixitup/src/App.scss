@@ -126,7 +126,6 @@ body{
 // END LANDING-OVER-IMG 
 .landing-content{
     background-color:white;
-    // width: 100%;
     color:$prussian-blue;
     font-family:"Spartan";
   
@@ -137,7 +136,6 @@ body{
     grid-column-gap:5vw;
     padding-top: 20px;
     height:33vw;
-    background-color:yellowgreen;
     margin: 1em;
   }
   
@@ -155,6 +153,7 @@ body{
 .content-btn-form{
   margin: auto;
   max-width: 45vw;
+  padding:0.15em;
 }
 
 @mixin std-btn {
@@ -182,7 +181,7 @@ button.landing-btn{
 button.content-btn{
   @include std-btn;
   font-size: 2.7vw;
-  padding: 4px;
+  padding: 1em;
   color: $prussian-blue;
   border: 2px solid $prussian-blue;
   box-shadow: 2px 2px 2px $prussian-blue;
