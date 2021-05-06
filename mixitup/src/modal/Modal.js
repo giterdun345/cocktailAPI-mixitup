@@ -5,7 +5,7 @@ const Modal= (props)=> {
 
     return (
       <div>
-        {props.show ? <div className="modal-overlay">
+        {props.show ? <div className="modal">
                         <button onClick={()=> props.setShow(!props.show)}>&times;</button>
                         <Random loading={props.show} setShow={props.setShow} />
                       </div> 

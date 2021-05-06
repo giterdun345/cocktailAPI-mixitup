@@ -11,8 +11,8 @@ const Random= (props)=>{
                                   })
  
   const populatedData= (
-    <Link to={`/names-detail/${data.idDrink}`} onClick={()=> props.setShow(false)} alt='cocktail image click for details' style={{cursor:"pointer"}}>
-      <img className='img' style={{width:"20.5vw", textAlign:"center", borderTopLeftRadius:"5px",borderTopRightRadius:"5px"}}src={`${data.strDrinkThumb}/preview`} alt="random cocktail generated" />
+    <Link to={`/names-detail/${data.idDrink}`} onClick={()=> props.setShow(false)} alt='cocktail image click for details' className='modal-content'>
+      <img style={{height:"35vw", textAlign:"center", borderTopLeftRadius:"5px", borderTopRightRadius:"5px"}}src={`${data.strDrinkThumb}`} alt="random cocktail generated" />
       <h2>{data.strDrink}</h2>
       <h3>{data.strAlcoholic}</h3>
       <h4>{`${data.strGlass}`}</h4>
@@ -37,11 +37,8 @@ const Random= (props)=>{
   }, [props.loading])
 
   return(
-    
     <section className="modal-content">
-        <div className='random-cocktail'>
           {data ? populatedData : stillLoading}
-        </div>
     </section>
   )
 }
