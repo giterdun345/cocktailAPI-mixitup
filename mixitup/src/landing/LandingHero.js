@@ -14,7 +14,7 @@ const hOne = given =>(
 
   return(
     <div>
-      <img className="landing-img" src={landingImg} alt='splashing ice cubes in glasses'/>
+      <img className="main-landing-img" src={landingImg} alt='splashing ice cubes in glasses'/>
       <Header />
         <section className="landing-over-img">
         <h1>
@@ -22,7 +22,7 @@ const hOne = given =>(
         </h1>
           <p style={{textIndent:"6vw"}}>Want some new ingredients to try?</p>
           <p style={{textIndent:"6vw"}}> Want to explore different tastes?</p>
-          <p style={{fontSize:"1.5vw"}}>Uses an open, crowd-sourced database from 
+          <p style={{fontSize:"1.5vw", marginBottom:'1em'}}>Uses an open, crowd-sourced database from 
             <a href="https://www.thecocktaildb.com/" target="_blank" rel="noreferrer" > CocktailDB </a> 
             <br/>containing drinks and cocktails from around the world.
           </p>
