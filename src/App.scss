@@ -1,0 +1,549 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&display=swap');
+/* FONTS */
+$Freckle: "Freckle Face", sans-serif;
+$Bebas: "Bebas Neue", sans-serif;
+$Spartan: "Spartan", serif;
+$Arvo: "Arvo", serif;
+$Merri: "Merriweather", sans-serif;
+/* SCSS HEX */
+$prussian-blue: #003049ff;
+$maximum-red: #d62828ff;
+$orange: #f77f00ff;
+$maximum-yellow-red: #fcbf49ff;
+$lemon-meringue: #eae2b7ff;
+$grayish: rgb(233, 233, 233);
+/* CUSTOM */ 
+$lemon-shadow: 2px 2px 1px $prussian-blue;
+
+body{
+  margin: 0;
+  width: 100%;
+  // text-align: center;
+}
+
+.header{
+  width: 100%;
+  font-family: $Bebas;
+  letter-spacing: 2px;
+  padding-top: 10px;
+}  
+
+.header-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+}
+
+.navlinks{
+      position: relative;
+      align-self: center;
+}
+
+.links{
+      height: 100%;
+      margin: 0;
+      padding:0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: center;
+      justify-content: space-between;
+
+      li{
+        font-size: 3vw;
+        list-style-type: none;
+         
+        a{
+          margin-right: 5vw;
+          color: $lemon-meringue;
+          text-shadow: $lemon-shadow;
+          text-decoration: none;
+        }
+
+        a:hover{
+          color: $maximum-red;
+        }
+
+        .active-modal{
+          color: $maximum-red;
+        }
+      }
+      .nav-link{
+        white-space: nowrap;
+      }
+  }
+   
+  
+  // ###################################   logo styling 
+  .logo{
+    margin-right: 2rem;
+    font-family: "Freckle Face";
+    display: flex;
+    flex-flow: row nowrap;
+    text-decoration: none;
+    font-size: 5vw;
+    margin-left: 7px ;   
+  }
+
+.main-landing-img{
+  background-image: url("/images/landing-img.jpg");
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+  max-height: 100vh;
+  z-index: -1;
+}
+
+// // ###################################  landing page 
+.landing-over-img{
+  font-family:"Arvo";
+  color: $lemon-meringue;
+  text-shadow: $lemon-shadow;
+  margin: 11vw 0 10vw 5vw;
+  font-size: 2.5vw;
+
+  a{
+    color:$lemon-meringue;
+  }
+  
+  a:hover{
+    color:$maximum-yellow-red;
+  }
+  
+  a:visited {
+    color: $maximum-yellow-red;
+  }
+}
+// END LANDING-OVER-IMG 
+.landing-content{
+    background-color:white;
+    color:$prussian-blue;
+    font-family:"Spartan";
+  
+  .content-row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-column-gap:5vw;
+    padding-top: 20px;
+    height:33vw;
+    margin: 1em;
+  }
+  
+  .content-text{
+    font-weight:bold;
+    font-size: 2vw;
+    white-space: wrap;
+  }
+}
+
+.hero-btn-form{
+  margin: 100% 0 0 20%;
+}
+
+.content-btn-form{
+  margin: auto;
+  max-width: 45vw;
+  padding:0.15em;
+}
+
+@mixin std-btn {
+  background: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+}
+
+// thanks to https://codepen.io/forkintheroad/pen/xxGaXbK 
+button.landing-btn{
+  @include std-btn;
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+  color: $lemon-meringue;
+  border: 2px solid $lemon-meringue;
+  box-shadow: 2px 2px 2px $maximum-yellow-red;
+}
+
+button.content-btn{
+  @include std-btn;
+  font-size: 2.7vw;
+  padding: 1em;
+  color: $prussian-blue;
+  border: 2px solid $prussian-blue;
+  box-shadow: 2px 2px 2px $prussian-blue;
+}
+
+@media only screen and (max-width: 1000px){
+  button.landing-btn{
+     display: none;
+  }
+}
+
+button.lb-2{
+  overflow: hidden;
+  position: relative;
+}
+
+button.lb-2:hover{
+  color: $prussian-blue;
+}
+
+button.lb-2:after {
+  content:'';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: $lemon-meringue;
+}
+
+button.lb-2:hover:after,
+button.lb-2:active:after {
+  height: 100%;
+}
+
+// // ################### search bar styling 
+// //  Thanks to https://codepen.io/takaneichinose/pen/gKVXXL
+.search {
+  margin: 2vw; 
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+}
+
+.search > div:after {
+  content: "";
+  background: $maximum-red;
+  width: 5px;
+  height: 2.3vh;
+  position: absolute;
+  top: 5.3vh;
+  right: .4vh;
+  // left:
+  box-shadow: 1px 2px 5px $prussian-blue;
+  transform: rotate(140deg);
+}
+
+.search > div > input {
+  color: $prussian-blue;
+  font-size: 2.3vw;
+  background: transparent;
+  width: 2.2vh;
+  height: 2.2vh;
+  padding: 0.625rem;
+  border: solid 3px $maximum-red;
+  box-shadow: 1px 2px 5px $prussian-blue;
+
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color:$prussian-blue;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 30vw;
+}
+
+@media screen and (max-width:630px){
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width:630px){
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+    width: 20vw;
+  }
+}
+
+// // #################################### MODAL STYLING 
+.modal{
+  position: fixed;
+  padding-top: 25px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.97);
+  -webkit-transition: 0.5s;
+  transition: all 0.3s linear;
+  overflow: auto;
+  text-align: center;
+
+  a{
+    text-decoration: none;
+    color: $lemon-meringue;
+    font-size: 2vw;
+    h2, h3, h4{
+      margin: 0;
+    }
+  }
+
+  
+  button{
+    margin-left: 36%;
+    background: $grayish;
+    border-radius: 50%;
+    color: $maximum-red;
+    font-weight: bold;  
+  }
+}  
+
+// // ######################## CONTENT LIST  
+.content-header{
+  display: grid;
+  grid-template-columns: 33% auto;
+  grid-template-rows: 10vw ;
+  grid-column-gap: 4vw;
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+
+  .search-bar{
+    align-self: center;
+  }
+  .title{
+    align-self: center;
+    font-size: 3vw;
+  }
+
+}
+
+
+
+// // ####################### BROWSE BY LETTER 
+.letters{
+  font-size:3vw;
+  font-family: "Bebas Neue";
+  margin: auto;
+  color: $prussian-blue;
+  border-bottom: 2px solid $maximum-red;
+}
+
+// // ###########################################  LIST CARDS
+.list-container{
+  margin: 1vw 2vw 5vh 2vw;
+}
+
+.list-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.list-card{
+  margin-top: 5vw;
+  background:$grayish;
+  flex: 0 1 calc(25% - 1.5em);
+  font-family: "Merriweather";
+  border: 1px inset $prussian-blue;
+  border-radius: 5px;
+  box-shadow: 2px 5px 10px $prussian-blue;
+
+  a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      filter: alpha(opacity=30);
+      color: $prussian-blue;
+      box-shadow: 0px 10px 50px $grayish;
+    }
+
+    img{
+      margin-top: 3px;
+      border: 3px inset $prussian-blue;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      overflow:hidden;
+    }
+
+    /* Shine */
+  figure {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  figure::before {
+    position: absolute;
+    top: 0;
+    left: -65%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 47%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+
+  figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+  }
+  @-webkit-keyframes shine {
+    100% {
+      left: 100%;
+    }
+  }
+  @keyframes shine {
+    100% {
+      left: 100%;
+    }
+  }
+
+    
+}
+  
+  
+  h3{
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  h4{
+    text-transform: full-size;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width:432px){
+    .list-cards{
+      justify-content: center;
+    }
+}
+
+// // ########################## DETAIL OF COCKTAIL
+.details{
+  
+  .detail-header{
+    display: grid;
+    grid-template-columns: 37% 63%;
+    font-family:"Merriweather";
+
+    h1{
+      align-self: end;
+      justify-self: end;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 3.5rem;
+      margin-bottom:0;
+      margin-top:0;
+      padding-right:9vw;
+
+    }
+
+    @media screen and (max-width:1059px){
+      h1{
+        justify-self: start;
+        align-self: center;
+        font-size: 7vw;
+      }
+    }
+  }
+}
+
+  .detail-container{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+  } 
+
+  .detail-info{
+    font-family:"Merriweather";
+    letter-spacing: 1.25px;
+    margin-right: 10vw;
+    margin-left:10vw;
+    flex: 0 0 33em;
+  }
+
+  @media screen and (max-width:579px){
+    .detail-info{
+      flex: 0 1 auto;
+    }
+
+  }
+
+  .detail-img{
+    border: 1px inset $prussian-blue;
+    box-shadow: 2px 2px 5px $prussian-blue;
+    align-self: flex-end;
+    // max-height: 30vw;
+  }
+  
+
+//  ######################## LOADING ICON THANKS TO https://loading.io/css/
+  
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  text-align: center;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid $maximum-yellow-red;
+  border-color: $maximum-red transparent $maximum-red transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
